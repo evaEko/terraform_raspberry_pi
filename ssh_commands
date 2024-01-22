@@ -1,0 +1,12 @@
+setting up ssh:
+on local machine:
+generate keys
+if using putty, use puttygen to export to openssh
+scp -P 2222 openssh_raspberry_public.pub eko@192.168.0.150:/home/eko/.ssh/
+ssh into the machine
+cp openssh_raspeberry_public.pub authorized_keys
+
+^^^puttygen is bullshit; just use unix keygen
+
+to connect:
+ ssh -i .ssh\from_rb_pi_rsa eko@192.168.0.150 -p 2222
